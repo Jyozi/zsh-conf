@@ -1,24 +1,17 @@
-#
-# Executes commands at the start of an interactive session.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
-PREZTO_DIR="${ZDOTDIR: -$HOME}/.zprezto"
-if [ ! -d $PREZTO_DIR ]
+PREZTO_DIR="$HOME/.zprezto"
+if [[ ! -d $PREZTO_DIR ]]
 then
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "$HOME/.zprezto"
 else
   cd ${PREZTO_DIR}
   git pull
+  cd
 fi
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
-
-# Customize to your needs...
 
 export LSCOLORS=Gxfxcxdxcxegedabagacad
 
