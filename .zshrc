@@ -4,6 +4,14 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
+PREZTO_DIR="${ZDOTDIR: -$HOME}/.zprezto"
+if [ ! -d $PREZTO_DIR ]
+then
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+else
+  cd ${PREZTO_DIR}
+  git pull
+fi
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
