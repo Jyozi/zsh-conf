@@ -24,6 +24,11 @@ alias ll='ls -lG'
 alias la='ls -aG'
 alias ls='ls -G'
 
+# History
+export HISTCONTROL=ignoreboth
+export HISTIGNORE=history*:cd*
+export HISTTIMEFORMAT='%Y/%m/%d %H:%M:%S'
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"
