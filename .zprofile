@@ -1,9 +1,3 @@
-#
-# Executes commands at login pre-zshrc.
-#
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 export LANG=ja_JP.UTF-8
 
 # Get the aliases and functions
