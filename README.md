@@ -10,8 +10,7 @@ curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv
 
 ## ghq
 ```
-git clone https://github.com/x-motemen/ghq .
-make install
+go get github.com/x-motemen/ghq
 ```
 
 ## fzf
